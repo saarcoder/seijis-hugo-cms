@@ -1,9 +1,22 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
-
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+defaultContentLanguage = 'en'
+[languages]
+  [languages.en]
+    title = 'Homepage'
+    weight = 2
+    [languages.en.params]
+      linkedin = 'https://linkedin.com/whoever'
+  [languages.de]
+    title = 'Blog'
+    weight = 1
+    [languages.de.params]
+      [languages.de.params.navigation]
+        help = 'Hilfe'
+[params]
+  [params.navigation]
+    help = 'Help'
